@@ -58,13 +58,6 @@ const solutionTwo = () =>{
   setArr(tempArr)
    }
 }
-// const solutionThree = () =>{
-//   if(matrix[2][0] === 1){
-//   let tempArr = [...arr];
-//   tempArr[2][0] = 0;
-//   setArr(tempArr)
-//    }
-// }
 const solutionFour = () =>{
   if(matrix[1][1] === 1){
   let tempArr = [...arr];
@@ -74,16 +67,17 @@ const solutionFour = () =>{
 }
   return (
     <div className={classes.root}>
+      <div className="button">
       <button onClick={solutionOne}>Solution One</button>
       <button onClick={solutionTwo}>Solution Two</button>
-      {/* <button onClick={solutionThree}>Solution Three</button> */}
       <button onClick={solutionFour}>All Solutions</button>
+      </div>
       <Grid container spacing={1}>
         <Box p={8}>
           <Grid
             style={{ backgroundColor: "orange" }}
             container
-            justify="center"
+            justifyContent="center"
           >
             <Grid
              className="grid-container"
@@ -101,14 +95,14 @@ const solutionFour = () =>{
           <Grid
             style={{ backgroundColor: "orange" }}
             container
-            justify="center"
+            justifyContent="center"
           >
             <Typography gutterBottom variant="subtitle1">
               Initial Maze
             </Typography>
           </Grid>
         </Box>
-        <Grid style={{ backgroundColor: "orange" }} container justify="center">
+        <Grid style={{ backgroundColor: "orange" }} container justifyContent="center">
           <Typography gutterBottom variant="subtitle1">
             Total Paths = {paths.length}
           </Typography>
@@ -188,7 +182,7 @@ function calculatePaths(arr, i, j, rows, columns) {
 }
 
 function loadCells(mat, rows, columns, gindex, path) {
-    console.log(mat);
+    // console.log(mat);
   let matrix = Array(rows)
     .fill()
     .map(() => Array(columns).fill(0));
@@ -251,11 +245,6 @@ function loadCells(mat, rows, columns, gindex, path) {
         } else {
           cells.push(
             <Cell
-            onClick={
-              (e)=>{
-              console.log(e.target);
-              }
-            }
               key={gindex.toString() + rindex.toString() + cindex.toString()}
               color="white"
             >
