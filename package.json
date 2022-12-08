@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/Nitintom/Rat-in-a-Maze---React-Project---s5qv2smmmko3",
   "name": "ratinamaze",
   "version": "0.1.0",
   "private": true,
@@ -14,8 +13,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
