@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Cell from "./Cell";
 import rat from "./rat.png";
 import cheese from "./cheese.png";
-import { Box, Button, Input } from "@material-ui/core";
+import { Box} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
